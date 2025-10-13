@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fevicon -->
+     <link rel="shortcut icon" href="./assets/fevicon.png" type="image/x-icon">
+    <title>LAW 63 | Juris Academia</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for a professional, law-themed look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb; /* Light background for professionalism */
+        }
+        /* Style for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'law-primary': '#1A237E', /* Deep Indigo/Navy Blue */
+                        'law-secondary': '#3F51B5', /* Medium Blue */
+                        'law-accent': '#FFC107', /* Amber/Gold for highlights */
+                    },
+                }
+            }
+        }
+
+        // JavaScript for navigation and interactivity
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide icons
+            lucide.createIcons();
+
+            // Mobile menu toggle
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+
+        /**
+         * Placeholder function for future features (like a Case Brief generator)
+         */
+        function handleFeatureClick(featureName) {
+            const messageBox = document.getElementById('message-box');
+            messageBox.textContent = `Feature '${featureName}' clicked! This is where advanced legal tools would load.`;
+            messageBox.classList.remove('opacity-0', 'scale-95');
+            messageBox.classList.add('opacity-100', 'scale-100');
+            
+            setTimeout(() => {
+                messageBox.classList.remove('opacity-100', 'scale-100');
+                messageBox.classList.add('opacity-0', 'scale-95');
+            }, 3000);
+        }
+
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <!-- Global Message Box (Instead of alert()) -->
+    <div id="message-box" class="fixed top-4 right-4 bg-law-accent text-law-primary p-4 rounded-lg shadow-xl transition-all duration-300 transform opacity-0 scale-95 z-50">
+        Message goes here.
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="bg-law-primary text-white shadow-lg sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center space-x-2 text-2xl font-extrabold tracking-tight">
+                    <i data-lucide="scale" class="w-7 h-7 text-law-accent"></i>
+                    <span>LAW <span class="text-law-accent">63</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <!-- Uses 'hidden md:flex' to show only on medium screens and up -->
+                <nav class="hidden md:flex space-x-8 font-medium">
+                    <a href="#study-tools" class="hover:text-law-accent transition duration-150 p-2 rounded-lg">Study Tools</a>
+                    <a href="#career-hub" class="hover:text-law-accent transition duration-150 p-2 rounded-lg">Career Hub</a>
+                    <a href="#legal-updates" class="hover:text-law-accent transition duration-150 p-2 rounded-lg">Legal Updates</a>
+                    <a href="#contact" class="bg-law-secondary hover:bg-law-accent hover:text-law-primary transition duration-150 px-4 py-2 rounded-lg shadow-md">Join Community</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-button" class="md:hidden p-2 rounded-md hover:bg-law-secondary transition duration-150">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-law-secondary">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#study-tools" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-law-primary transition duration-150">Study Tools</a>
+                <a href="#career-hub" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-law-primary transition duration-150">Career Hub</a>
+                <a href="#legal-updates" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-law-primary transition duration-150">Legal Updates</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium bg-law-accent text-law-primary hover:bg-white transition duration-150">Join Community</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="bg-white pt-16 pb-24 border-b-4 border-law-accent">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-5xl sm:text-6xl font-extrabold text-law-primary leading-tight mb-4">
+                    Master the Law. <span class="text-law-secondary block sm:inline">Define Your Practice.</span>
+                </h1>
+                <!-- <p class="mt-3 text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                    Your essential resource for case briefing, exam prep, and securing a competitive edge in your legal career.
+                </p> -->
+                <p class="mt-3 text-xl text-gray-600 max-w-3xl mx-auto mb-8">|-----|</p>
+                <!-- Button layout changes from stacked (mobile) to side-by-side (sm:flex-row) -->
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#study-tools" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-xl shadow-xl text-white bg-law-secondary hover:bg-law-primary transition duration-300 transform hover:scale-105">
+                        Start Studying <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+                    </a>
+                    <a href="#career-hub" class="inline-flex items-center justify-center px-8 py-4 border-2 border-law-primary text-base font-medium rounded-xl shadow-xl text-law-primary bg-white hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                        Explore Career Paths
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Study Tools Section -->
+        <section id="study-tools" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-law-accent font-semibold uppercase tracking-wider">Your Edge</span>
+                    <h2 class="mt-2 text-4xl font-bold text-law-primary">Essential Study Tools</h2>
+                    <p class="mt-4 text-xl text-gray-600">Navigate complex concepts and ace your exams with confidence.</p>
+                </div>
+
+                <!-- Cards display in a single column on mobile, and 3 columns on medium screens and up -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Tool Card 1: Case Briefing -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-law-secondary cursor-pointer" onclick="handleFeatureClick('Case Briefing')">
+                        <i data-lucide="book-open" class="w-10 h-10 text-law-secondary mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-2 text-law-primary">Case Briefing Template</h3>
+                        <p class="text-gray-600">Standardized templates for IRAC/CRAC method, ensuring every critical detail is captured efficiently.</p>
+                        <button class="mt-4 text-law-secondary font-medium flex items-center hover:text-law-primary">
+                            Access Now <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- Tool Card 2: Legal Writing Guide -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-law-secondary cursor-pointer" onclick="handleFeatureClick('Legal Writing Guide')">
+                        <i data-lucide="feather" class="w-10 h-10 text-law-secondary mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-2 text-law-primary">Advanced Legal Writing</h3>
+                        <p class="text-gray-600">Guides on Bluebook citation, memo structure, and persuasive writing techniques.</p>
+                        <button class="mt-4 text-law-secondary font-medium flex items-center hover:text-law-primary">
+                            Access Now <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                        </button>
+                    </div>
+
+                    <!-- Tool Card 3: Statute Annotation -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-law-secondary cursor-pointer" onclick="handleFeatureClick('Statute Annotation')">
+                        <i data-lucide="clipboard-list" class="w-10 h-10 text-law-secondary mb-4"></i>
+                        <h3 class="text-2xl font-semibold mb-2 text-law-primary">Statute Annotation</h3>
+                        <p class="text-gray-600">Techniques for breaking down complex statutes and legislative intent for better comprehension.</p>
+                        <button class="mt-4 text-law-secondary font-medium flex items-center hover:text-law-primary">
+                            Access Now <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Hub Section -->
+        <section id="career-hub" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-law-accent font-semibold uppercase tracking-wider">Future Practice</span>
+                    <h2 class="mt-2 text-4xl font-bold text-law-primary">The Career Hub</h2>
+                    <p class="mt-4 text-xl text-gray-600">Connect with firms, prepare for interviews, and conquer the Bar Exam.</p>
+                </div>
+
+                <!-- Uses a single column on mobile/tablet, and 2 columns on large screens and up -->
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <!-- Career Listings -->
+                    <div>
+                        <div class="space-y-6">
+                            <!-- Career Item 1 -->
+                            <div class="bg-gray-100 p-6 rounded-xl shadow-md border-l-4 border-law-accent">
+                                <h4 class="text-xl font-semibold text-law-primary flex items-center mb-1">
+                                    <i data-lucide="briefcase" class="w-5 h-5 mr-3 text-law-secondary"></i>
+                                    Summer Associate 1L/2L Opportunities
+                                </h4>
+                                <p class="text-gray-600 text-sm">A curated database of positions from major law firms (BigLaw) and public interest organizations.</p>
+                                <button class="mt-2 text-sm text-law-secondary font-medium hover:text-law-primary" onclick="handleFeatureClick('Job Listings')">View Openings →</button>
+                            </div>
+                            <!-- Career Item 2 -->
+                            <div class="bg-gray-100 p-6 rounded-xl shadow-md border-l-4 border-law-accent">
+                                <h4 class="text-xl font-semibold text-law-primary flex items-center mb-1">
+                                    <i data-lucide="target" class="w-5 h-5 mr-3 text-law-secondary"></i>
+                                    Mock Interview Simulator
+                                </h4>
+                                <p class="text-gray-600 text-sm">Practice answering behavioral and legal questions specific to OCI and firm interviews.</p>
+                                <button class="mt-2 text-sm text-law-secondary font-medium hover:text-law-primary" onclick="handleFeatureClick('Interview Simulator')">Start Practice →</button>
+                            </div>
+                            <!-- Career Item 3 -->
+                            <div class="bg-gray-100 p-6 rounded-xl shadow-md border-l-4 border-law-accent">
+                                <h4 class="text-xl font-semibold text-law-primary flex items-center mb-1">
+                                    <i data-lucide="trending-up" class="w-5 h-5 mr-3 text-law-secondary"></i>
+                                    Bar Exam Resource Trackers
+                                </h4>
+                                <p class="text-gray-600 text-sm">Track your progress in subjects like Torts, Contracts, and Constitutional Law for the MPRE and Bar.</p>
+                                <button class="mt-2 text-sm text-law-secondary font-medium hover:text-law-primary" onclick="handleFeatureClick('Bar Exam Prep')">Access Resources →</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image/CTA Box -->
+                    <div class="bg-law-secondary p-8 lg:p-12 rounded-xl shadow-2xl text-white transform hover:scale-[1.02] transition duration-500">
+                        <i data-lucide="network" class="w-12 h-12 mb-4 text-law-accent"></i>
+                        <h3 class="text-3xl font-bold mb-4">Build Your Legal Network</h3>
+                        <p class="text-gray-200 mb-6">Access exclusive webinars with practicing attorneys, judges, and legal tech innovators. Your next mentor is waiting.</p>
+                        <a href="#" class="inline-flex items-center px-6 py-3 bg-law-accent text-law-primary font-bold rounded-lg shadow-lg hover:bg-white transition duration-300">
+                            Register for Events <i data-lucide="calendar-check" class="w-5 h-5 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Legal Updates Section -->
+        <section id="legal-updates" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-law-accent font-semibold uppercase tracking-wider">Stay Current</span>
+                    <h2 class="mt-2 text-4xl font-bold text-law-primary">Latest Legal Analysis</h2>
+                    <p class="mt-4 text-xl text-gray-600">Curated digests of landmark cases and legislative changes impacting your coursework.</p>
+                </div>
+
+                <!-- Cards display 1 column on mobile, 2 on medium screens, and 4 on large screens -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Update Card 1 -->
+                    <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <!-- Placeholder image uses fluid width 'w-full' -->
+                        <img src="https://placehold.co/400x200/5C6BC0/ffffff?text=Constitutional+Law" class="w-full h-32 object-cover rounded-t-lg mb-3" alt="Constitutional Law">
+                        <p class="text-xs text-gray-500 mb-1">OCT 13, 2025 | Torts</p>
+                        <h4 class="text-lg font-semibold text-law-primary hover:text-law-secondary cursor-pointer">The Evolving Standard of Care in AI Liability</h4>
+                        <a href="#" class="text-sm text-law-accent font-medium hover:underline">Read More</a>
+                    </div>
+                    <!-- Update Card 2 -->
+                    <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <img src="https://placehold.co/400x200/5C6BC0/ffffff?text=Criminal+Procedure" class="w-full h-32 object-cover rounded-t-lg mb-3" alt="Criminal Procedure">
+                        <p class="text-xs text-gray-500 mb-1">SEP 28, 2025 | Crim Pro</p>
+                        <h4 class="text-lg font-semibold text-law-primary hover:text-law-secondary cursor-pointer">Fourth Amendment: Drone Surveillance and Expectation of Privacy</h4>
+                        <a href="#" class="text-sm text-law-accent font-medium hover:underline">Read More</a>
+                    </div>
+                    <!-- Update Card 3 -->
+                    <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <img src="https://placehold.co/400x200/5C6BC0/ffffff?text=Contracts" class="w-full h-32 object-cover rounded-t-lg mb-3" alt="Contracts">
+                        <p class="text-xs text-gray-500 mb-1">SEP 15, 2025 | Contracts</p>
+                        <h4 class="text-lg font-semibold text-law-primary hover:text-law-secondary cursor-pointer">Force Majeure Clauses in the Modern Commercial World</h4>
+                        <a href="#" class="text-sm text-law-accent font-medium hover:underline">Read More</a>
+                    </div>
+                    <!-- Update Card 4 -->
+                    <div class="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+                        <img src="https://placehold.co/400x200/5C6BC0/ffffff?text=Property+Law" class="w-full h-32 object-cover rounded-t-lg mb-3" alt="Property Law">
+                        <p class="text-xs text-gray-500 mb-1">AUG 30, 2025 | Property</p>
+                        <h4 class="text-lg font-semibold text-law-primary hover:text-law-secondary cursor-pointer">Zoning Reform and Affordable Housing Initiatives</h4>
+                        <a href="#" class="text-sm text-law-accent font-medium hover:underline">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <!-- Uses a single column on mobile, and 4 columns on medium screens and up -->
+    <footer id="contact" class="bg-law-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 border-b border-law-secondary pb-8">
+                <!-- Branding -->
+                <div>
+                    <a href="#" class="flex items-center space-x-2 text-xl font-extrabold tracking-tight mb-4">
+                        <i data-lucide="scale" class="w-6 h-6 text-law-accent"></i>
+                        <span>LAW <span class="text-law-accent">63</span></span>
+                    </a>
+                    <p class="text-sm text-gray-300">Empowering the next generation of legal minds.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="text-lg font-semibold text-law-accent mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li><a href="#study-tools" class="hover:text-white transition duration-150">Study Guides</a></li>
+                        <li><a href="#career-hub" class="hover:text-white transition duration-150">Internships</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-150">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-150">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h5 class="text-lg font-semibold text-law-accent mb-4">Support</h5>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li><a href="#" class="hover:text-white transition duration-150">FAQ & Help</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-150">Submit a Resource</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-150">Contact Team</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Social -->
+                <div>
+                    <h5 class="text-lg font-semibold text-law-accent mb-4">Connect</h5>
+                    <p class="text-sm text-gray-300 mb-4">
+                        Email: <a href="mailto:info@jurisacademia.com" class="hover:text-white transition duration-150">info@jurisacademia.com</a>
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="LinkedIn" class="hover:text-law-accent transition duration-150"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                        <a href="#" aria-label="Twitter" class="hover:text-law-accent transition duration-150"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                        <a href="#" aria-label="Instagram" class="hover:text-law-accent transition duration-150"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center text-sm text-gray-400">
+                &copy; 2025 LAW 63 | EU. All rights reserved. Designed for legal excellence.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
